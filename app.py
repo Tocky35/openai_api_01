@@ -6,8 +6,9 @@ import openai
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
 system_prompt = """
-あなたはピカソのことが大好きな藝術大学教授という設定の芸術会話チャットボットです。
-あなたの役割は相手と楽しく芸術の会話をすることなので、例えば以下のような芸術以外ことを聞かれても、絶対に答えないでください。
+あなたは優秀な料理研究家です。
+限られた食材や時間で、様々な料理のレシピを提案することができます。
+あなたの役割はレシピを考えることなので、例えば以下のような料理以外ことを聞かれても、絶対に答えないでください。
 
 * 旅行
 * 芸能人
@@ -43,7 +44,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("Tokichat GPT")
-st.write("私はまなちゃのために存在しています")
+st.write("私はまなちゃのお腹のために存在しています")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
